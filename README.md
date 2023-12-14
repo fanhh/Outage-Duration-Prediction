@@ -96,9 +96,28 @@ In the final model, we carefully selected a blend of features that offer compreh
   - `CAUSE.CATEGORY.DETAIL`
   - `PI.UTIL.OFUSA`
 
-  **Rationale for Selection:**
-  - These features encompass a wide range of factors, from geographical (e.g., `NERC.REGION`, `U.S._STATE`) and climatic (`CLIMATE.REGION`, `ANOMALY.LEVEL`) to demographic (`POPULATION`, `CUSTOMERS.AFFECTED`) and operational aspects (`CAUSE.CATEGORY`, `PI.UTIL.OFUSA`).
-  - Each feature is expected to have a distinct impact on the duration of power outages. For example, `ANOMALY.LEVEL` might be indicative of extreme weather conditions, while `CUSTOMERS.AFFECTED` gives an idea about the scale of the outage.
+ ### Explanation of Features in the Model
+
+- **NERC.REGION**: This feature is transformed using one-hot encoding. The North American Electric Reliability Corporation (NERC) region provides essential geographical information that can influence power outage durations. Different regions may have unique infrastructure, environmental, and operational characteristics affecting outage patterns.
+
+- **CLIMATE.REGION**: Also transformed using one-hot encoding, this feature categorizes the geographic area into specific climate regions. Climate regions are critical in understanding and predicting outage durations since certain weather patterns and environmental conditions are unique to each region.
+
+- **ANOMALY.LEVEL**: Scaled using StandardScaler, the anomaly level indicates deviations from typical climatic conditions, which might be a crucial factor in the occurrence and duration of power outages. Scaling ensures this numeric feature is appropriately normalized for the model.
+
+- **CLIMATE.CATEGORY**: Transformed using one-hot encoding, this feature provides insights into the broader climatic conditions of a region, such as tropical, arid, or temperate climates. These categories can significantly impact the likelihood and severity of power outages.
+
+- **CAUSE.CATEGORY**: Transformed using one-hot encoding, this feature identifies the primary cause of the power outage, such as natural disasters, technical failures, or human errors. Understanding the cause is vital for predicting outage durations and developing mitigation strategies.
+
+- **CUSTOMERS.AFFECTED**: Scaled using StandardScaler, this feature quantifies the number of customers impacted by an outage. It's an important indicator of the outage's scale and can correlate with the duration and severity of the outage.
+
+- **POPULATION**: Scaled using StandardScaler, this feature reflects the population size of the affected area. Higher population areas might have more complex infrastructure, potentially influencing the duration of outages.
+
+- **U.S._STATE**: Transformed using one-hot encoding, this feature allows the model to capture state-specific factors that could affect outage durations, such as state-level policies, infrastructure quality, and geographic factors.
+
+- **CAUSE.CATEGORY.DETAIL**: Transformed using one-hot encoding, this feature provides more granular details about the cause of the outage. This finer level of categorization can help in understanding specific conditions leading to outages.
+
+- **PI.UTIL.OFUSA**: Scaled using StandardScaler, this feature represents the utility performance index of the USA. It provides an overview of the overall condition and reliability of the power infrastructure, which can be a crucial factor in the duration and frequency of power outages.
+
 
 ### Modeling Algorithm and Hyperparameters
 - **Model:** RandomForestRegressor

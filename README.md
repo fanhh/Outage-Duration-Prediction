@@ -91,7 +91,7 @@ The baseline model was established to set a foundational understanding of the pr
 
 ### Visualization
 <iframe src="base_model.html" width=800 height=600 frameBorder=0></iframe>
-
+The scatter plot for the baseline model, where most actual values and predictions cluster near the bottom, with a few exceptions, suggests a model that captures a predominant trend in the dataset but fails to account for all the variations. This pattern indicates that while the model may be effective in predicting a certain common scenario (reflected by the majority of points at the bottom), it struggles with instances that deviate from this norm. The presence of actual values away from the bottom, which the model fails to predict accurately, points to its limited capacity in handling diverse cases within the data. This could be a sign of oversimplification in the model's approach, where it primarily predicts a single outcome or a narrow range of outcomes, leading to a lack of comprehensive representational ability and potentially high bias for less common but significant scenarios.
 
 ### Conclusion
 While the baseline model sets an initial benchmark, it underscores the need for more sophisticated modeling approaches and a broader set of features to improve prediction accuracy and gain deeper insights into power outage duration factors.
@@ -160,6 +160,7 @@ In the final model, we carefully selected a blend of features that offer compreh
 
 ### Visualization
 <iframe src="final_model.html" width=800 height=600 frameBorder=0></iframe>
+The scatter plot of the final model's predictions versus the actual data points reveals a notably improved alignment and proximity of predicted values to actual values. This increased spacing out and closer matching in the scatter plot indicates that the final model has a higher degree of accuracy in its predictions. The dispersion of points suggests that the model captures the variability in the data effectively, and the closeness to the actual points signifies that it is successful in making predictions that are more aligned with the observed outcomes. Such a pattern in the scatter plot typically reflects a model that is well-tuned and robust, capable of generalizing well across the dataset, and suggests an enhancement in predictive performance compared to earlier model iterations.
 
 
 ### Conclusion

@@ -1,4 +1,4 @@
-## Power Outage Duration Prediction Project
+## Framing the Problem
 
 ### Prediction Problem and Type
 - **Type:** Regression  
@@ -40,7 +40,7 @@ Following procedures from our data cleaning, we converted the dataset from XLSX 
 
 
 
-## Baseline Model Overview and Performance Analysis for Power Outage Duration Prediction
+## Baseline Model
 
 ### Baseline Model Description
 The baseline model was established to set a foundational understanding of the problem and provide a benchmark for future model iterations.
@@ -98,7 +98,7 @@ While the baseline model sets an initial benchmark, it underscores the need for 
 
 
 
-## Final Model Description and Performance Analysis
+## Final Model
 
 ### Features in the Final Model
 In the final model, we carefully selected a blend of features that offer comprehensive insights into the factors influencing power outage durations:
@@ -166,7 +166,7 @@ In the final model, we carefully selected a blend of features that offer compreh
 The final model's superior performance over the baseline model is a testament to the effective combination of feature selection, modeling strategy, and hyperparameter optimization. It showcases a better understanding and capturing of the complexities involved in predicting power outage durations.
 
 
-## Fairness Analysis of Power Outage Duration Prediction Model
+## Fairness Analysis
 
 ### Group Definitions
 - **Group X (Normal Climate Category):** This group consists of data points where the `CLIMATE.CATEGORY` is labeled as 'normal'.

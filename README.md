@@ -115,7 +115,7 @@ In the final model, we carefully selected a blend of features that offer compreh
   - `CAUSE.CATEGORY.DETAIL`
   - `PI.UTIL.OFUSA`
 
- ### Explanation of Features in the Model
+### Explanation of Features in the Model
 
 - **NERC.REGION**: This feature is transformed using one-hot encoding. The North American Electric Reliability Corporation (NERC) region provides essential geographical information that can influence power outage durations. Different regions may have unique infrastructure, environmental, and operational characteristics affecting outage patterns.
 

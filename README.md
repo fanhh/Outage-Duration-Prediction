@@ -87,6 +87,11 @@ The baseline model was established to set a foundational understanding of the pr
 - **Good or Not?**
   - The model can be considered "adequate" for establishing a baseline but not "good" in terms of providing high accuracy predictions.
   - The simplicity of the model makes it a good starting point but not sufficient for capturing the nuanced relationships in the data.
+ 
+
+### Visualization
+<iframe src="base_model.html" width=800 height=600 frameBorder=0></iframe>
+
 
 ### Conclusion
 While the baseline model sets an initial benchmark, it underscores the need for more sophisticated modeling approaches and a broader set of features to improve prediction accuracy and gain deeper insights into power outage duration factors.
@@ -152,6 +157,11 @@ In the final model, we carefully selected a blend of features that offer compreh
   - This represents a substantial improvement in predictive accuracy compared to the baseline model.
   
   The significant reduction in MAE can be attributed to the more sophisticated RandomForestRegressor algorithm, the expanded and more informative set of features, and the optimized hyperparameters.
+
+
+### Visualization
+<iframe src="final_model.html" width=800 height=600 frameBorder=0></iframe>
+
 
 ### Conclusion
 The final model's superior performance over the baseline model is a testament to the effective combination of feature selection, modeling strategy, and hyperparameter optimization. It showcases a better understanding and capturing of the complexities involved in predicting power outage durations.

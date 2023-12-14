@@ -186,7 +186,7 @@ The final model's superior performance over the baseline model is a testament to
 
 ### Test Statistic and Significance Level
 - **Test Statistic:** Difference in RMSE between Group X and Group Y.
-- **Significance Level:** Typically, a significance level (α) of 0.05 is used.
+- **Significance Level:** A significance level (α) of 0.05 is used.
 
 ### Permutation Test
 - **Procedure:** The permutation test involved shuffling the `CLIMATE.CATEGORY` values and recalculating the RMSE for 1000 permutations.

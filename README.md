@@ -157,5 +157,34 @@ In the final model, we carefully selected a blend of features that offer compreh
 The final model's superior performance over the baseline model is a testament to the effective combination of feature selection, modeling strategy, and hyperparameter optimization. It showcases a better understanding and capturing of the complexities involved in predicting power outage durations.
 
 
+## Fairness Analysis of Power Outage Duration Prediction Model
+
+### Group Definitions
+- **Group X (Normal Climate Category):** This group consists of data points where the `CLIMATE.CATEGORY` is labeled as 'normal'.
+- **Group Y (Warm and Cold Climate Categories):** This group includes data points where the `CLIMATE.CATEGORY` is either 'warm' or 'cold'.
+
+### Evaluation Metric
+- **Metric Used:** Root Mean Squared Error (RMSE)
+- RMSE is chosen as it effectively captures the average magnitude of the errors in a prediction, making it suitable for a regression task like ours.
+
+### Hypotheses
+- **Null Hypothesis (H0):** The model's performance, in terms of RMSE, is similar for both normal climate categories and warm/cold climate categories. Any observed differences are due to random chance.
+- **Alternative Hypothesis (H1):** The model's performance is significantly different between the two climate categories, suggesting a disparity in prediction accuracy.
+
+### Test Statistic and Significance Level
+- **Test Statistic:** Difference in RMSE between Group X and Group Y.
+- **Significance Level:** Typically, a significance level (α) of 0.05 is used.
+
+### Permutation Test
+- **Procedure:** The permutation test involved shuffling the `CLIMATE.CATEGORY` values and recalculating the RMSE for 1000 permutations.
+- **Observed Difference in RMSE:** 410.79
+- **P-value:** 0.437
+
+### Conclusion
+- Given the p-value of 0.437, which is greater than our significance level of 0.05, we fail to reject the null hypothesis. This suggests that the observed difference in RMSE between normal and warm/cold climate categories could be due to random variation.
+- In other words, there is no strong statistical evidence to conclude that the model's performance is significantly different across these climate categories.
+- It is important to remember that these results do not definitively prove the null hypothesis; rather, they indicate that our current dataset does not provide sufficient evidence to support the alternative hypothesis of model bias between these groups.
+
+### Visualization
 
 

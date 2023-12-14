@@ -158,7 +158,6 @@ In the final model, we carefully selected a blend of features that offer compreh
   
   The significant reduction in MAE can be attributed to the more sophisticated RandomForestRegressor algorithm, the expanded and more informative set of features, and the optimized hyperparameters.
 
-
 ### Visualization
 <iframe src="final_model.html" width=800 height=600 frameBorder=0></iframe>
 
@@ -196,5 +195,5 @@ The final model's superior performance over the baseline model is a testament to
 - It is important to remember that these results do not definitively prove the null hypothesis; rather, they indicate that our current dataset does not provide sufficient evidence to support the alternative hypothesis of model bias between these groups.
 
 ### Visualization
-<iframe src="permutation.png" width=800 height=600 frameBorder=0></iframe>
+<iframe src="permutation.html" width=800 height=600 frameBorder=0></iframe>
 

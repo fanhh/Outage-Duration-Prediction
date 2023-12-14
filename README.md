@@ -52,11 +52,25 @@ The baseline model was established to set a foundational understanding of the pr
 
   There are no ordinal features in this baseline model.
 
-### Feature Encoding and Preprocessing
-- **Quantitative Feature (`ANOMALY.LEVEL`):**
-  - No specific encoding was required. Standard scaling was applied to normalize this feature.
-- **Nominal Feature (`CAUSE.CATEGORY`):**
-  - Encoded using OneHotEncoder. This transformation is essential for converting categorical text data into a machine-readable numeric format without implying any order.
+### Baseline Model Features and Encoding
+
+#### Features
+- **`ANOMALY.LEVEL`:** This is a quantitative feature that indicates the anomaly level, typically reflecting deviations from normal weather or climatic conditions. It is a numerical variable that can provide insight into the severity or uniqueness of the conditions leading to a power outage.
+
+- **`CAUSE.CATEGORY`:** This is a nominal feature that describes the category of the cause of the power outage, such as natural disasters, equipment failure, or human error. It is a categorical variable that helps in understanding the primary factors behind power outages.
+
+- **`OUTAGE.DURATION(mins)`:** This quantitative feature represents the duration of the power outage in minutes. It is the response variable in the model and is a crucial numerical indicator of the severity and impact of the outage.
+
+#### Encoding
+- **Categorical Feature Encoding:**
+  - The model uses one-hot encoding for the `CAUSE.CATEGORY` feature. This technique converts the categorical data into a binary numerical format, with separate columns representing each unique category in the dataset.
+  
+- **Numerical Feature Handling:**
+  - The `ANOMALY.LEVEL` feature, being numerical, does not require categorical encoding. However, it undergoes standard scaling to ensure that its values have a consistent scale compared to transformed categorical features.
+
+- **ColumnTransformer Configuration:**
+  - The `ColumnTransformer` in the model's pipeline is set up with the `remainder='passthrough'` parameter. This setup ensures that while the categorical `CAUSE.CATEGORY` undergoes one-hot encoding, the numerical `ANOMALY.LEVEL` feature is left unchanged, preserving its original form.
+
 
 ### Model Performance
 - **Evaluation Metric:** Mean Absolute Error (MAE)

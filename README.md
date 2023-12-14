@@ -27,7 +27,7 @@ Our analysis utilizes historical outage data collected since 2012. This dataset 
 
 
 ### Data Preprocessing
-Following procedures from our data cleaning, we converted the dataset from XLSX to CSV. We dropped irrelevant rows and columns, retaining only features correlated with `OUTAGE.DURATION`.
+Following procedures from our data cleaning, we converted the dataset from XLSX to CSV just like our which can be foud here(https://fanhh.github.io/Power-Outage-Exploratory-Data-Analysis/). We dropped irrelevant rows and columns, retaining only features correlated with `OUTAGE.DURATION`.
 
 | OBS | NERC.REGION | CLIMATE.REGION      | ANOMALY.LEVEL | CLIMATE.CATEGORY | CAUSE.CATEGORY     | CUSTOMERS.AFFECTED | POPULATION | U.S._STATE | CAUSE.CATEGORY.DETAIL | PI.UTIL.OFUSA | OUTAGE.DURATION |
 |-----|-------------|---------------------|---------------|------------------|--------------------|--------------------|------------|------------|-----------------------|---------------|-----------------|

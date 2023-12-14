@@ -186,5 +186,5 @@ The final model's superior performance over the baseline model is a testament to
 - It is important to remember that these results do not definitively prove the null hypothesis; rather, they indicate that our current dataset does not provide sufficient evidence to support the alternative hypothesis of model bias between these groups.
 
 ### Visualization
-
+<iframe src="Permutation.png" width=800 height=600 frameBorder=0></iframe>
 

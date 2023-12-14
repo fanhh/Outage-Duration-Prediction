@@ -28,6 +28,7 @@ Our analysis utilizes historical outage data collected since 2012. This dataset 
 
 ### Data Preprocessing
 Following procedures from our data cleaning, we converted the dataset from XLSX to CSV. We dropped irrelevant rows and columns, retaining only features correlated with `OUTAGE.DURATION`.
+
 | OBS | NERC.REGION | CLIMATE.REGION      | ANOMALY.LEVEL | CLIMATE.CATEGORY | CAUSE.CATEGORY     | CUSTOMERS.AFFECTED | POPULATION | U.S._STATE | CAUSE.CATEGORY.DETAIL | PI.UTIL.OFUSA | OUTAGE.DURATION |
 |-----|-------------|---------------------|---------------|------------------|--------------------|--------------------|------------|------------|-----------------------|---------------|-----------------|
 | 1.0 | MRO         | East North Central  | -0.3          | normal           | severe weather     | 70000.0            | 5348119.0  | Minnesota  | NaN                   | 2.2           | 3060            |

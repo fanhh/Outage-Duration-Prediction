@@ -197,3 +197,7 @@ The final model's superior performance over the baseline model is a testament to
 ### Visualization
 <iframe src="permutation.html" width=800 height=600 frameBorder=0></iframe>
 
+The histogram from our permutation test, which exhibits a normal distribution of RMSE differences between the 'Normal' and 'Warm/Cold' climate categories, suggests that variations in model performance are evenly distributed around the mean. This symmetry in distribution implies that the observed RMSE difference, positioned at the center of this distribution, is not unusual and lies within the expected range of random chance variations. Therefore, the lack of significant deviation from the mean in our observed data leads us to fail to reject the null hypothesis, indicating no strong statistical evidence of the model performing differently across these climate categories. The normal distribution and central placement of the observed difference in the histogram suggest that any disparities in model performance are likely due to random variation rather than systematic bias.
+
+
+
